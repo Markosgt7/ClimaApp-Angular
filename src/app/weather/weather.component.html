@@ -1,13 +1,19 @@
 <div class="mycontainer">
   <div class="card m-5 text-white bg-success">
-    <div class="card-header text-center">Name City Guatemala</div>
-    <div class="card-body">
-      <p class="card-text">Clima: Lluviso </p>
-      <p class="card-text">Temperatura: 35 </p>
-      <p class="card-text">Sensacion: 36</p>
-      <p class="card-text">Presion: 1024 </p>
-      <p class="card-text">Humedad: 50%</p>
+    <div class="card-header text-center">
+      <h2>{{ city }}</h2>
+      <p><img src="{{ icono }}" alt="Imagen del clima" style="width: 130px;"></p>
     </div>
-    <div class="card-footer text-white">Footer</div>
+    <div class="card-body">
+      <p class="card-text">Clima: {{ climaGeneral }}</p>
+      <p class="card-text">Temperatura: {{ temp }}°</p>
+      <p class="card-text">Sensacion: {{ sensacion }}°</p>
+      <p class="card-text">Mínima: {{ min }}</p>
+      <p class="card-text">Máxima: {{ max }}</p>
+      <p class="card-text">Húmedad: {{ humedad }}%</p>
+    </div>
+    <div class="card-footer text-white">
+      Velocidad del viento: {{ viento }}mts/seg
+    </div>
   </div>
 </div>
