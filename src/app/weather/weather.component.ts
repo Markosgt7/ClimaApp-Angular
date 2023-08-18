@@ -20,7 +20,7 @@ export class WeatherComponent implements OnInit {
   constructor(private weatherService: WeatherService) {}
 
   ngOnInit(): void {
-    this.weatherService.getWeather('Guatemala', 'gt').subscribe({
+    this.weatherService.getWeather('Bogota').subscribe({
       next: (res) => {
         this.myWeather = res;
         this.temp = this.myWeather.main.temp;

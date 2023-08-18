@@ -15,8 +15,8 @@ export class WeatherService {
     this.URI = `https://api.openweathermap.org/data/2.5/weather?appid=${this.apiKey}&units=metric&lang=es&q=`;
   }
 
-  getWeather(cityName: string, countryCode: string): Observable<any> {
-    const url = `${this.URI}${cityName},${countryCode}`;
+  getWeather(cityName: string): Observable<any> {
+    const url = `${this.URI}${cityName}`;
     return this.httpclient.get(url);
   }
 }
